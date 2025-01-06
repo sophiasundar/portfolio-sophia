@@ -199,7 +199,7 @@ const App = () => {
         </a>
 
         {/* Resume */}
-        <a href="https://drive.google.com/file/d/1lDx19jUES4qOeQ9An-MP877ztWhBnep_/view?usp=sharing" rel="noreferrer" target="_blank" className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-200 transition duration-300">
+        <a href="https://drive.google.com/file/d/1eIPcq4DdGkTcX5vACuOdqUkTLUUZAU_y/view?usp=sharing" rel="noreferrer" target="_blank" className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-200 transition duration-300">
           <FaFileDownload size={30} />
         </a>
       </div>
