@@ -606,6 +606,29 @@ const App = () => {
           <button className="bg-gray-500 text-white py-3 px-6 rounded-lg">Send Message</button>
         </form>
       </section>
+
+      {/* Footer Section */}
+<footer className="bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 text-white py-6">
+  <div className="container mx-auto text-center">
+    <div className="flex justify-center space-x-6 mb-4">
+      {/* GitHub */}
+      <a href="https://github.com/sophiasundar" target="_blank" rel="noreferrer" className="text-white hover:text-gray-300 transition duration-300">
+        <FaGithub size={24} />
+      </a>
+      {/* LinkedIn */}
+      <a href="https://www.linkedin.com/in/sophia-gifta17/" target="_blank" rel="noreferrer" className="text-white hover:text-gray-300 transition duration-300">
+        <FaLinkedin size={24} />
+      </a>
+      {/* Email */}
+      <a href="mailto:sophiagifta17@gmail.com" className="text-white hover:text-gray-300 transition duration-300">
+        <FaEnvelope size={24} />
+      </a>
+    </div>
+    <p className="text-sm">&copy; {new Date().getFullYear()} Sophia Christina Gifta. All rights reserved.</p>
+  </div>
+</footer>
+
+
     </div>
     </>
   );
