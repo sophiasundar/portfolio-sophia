@@ -443,6 +443,7 @@ const App = () => {
         <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Dotenv</span>
         <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">multer-storage</span>
         <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Cloudinary</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">socket.io</span>
       </div>
     </div>
     
@@ -451,7 +452,12 @@ const App = () => {
       <div className="bg-white p-6 rounded-lg shadow-lg">
         <h4 className="text-xl font-semibold mb-4">Description:</h4>
         <p className="text-gray-600 text-base leading-relaxed">
-          Just like a social media web app with features including user profile management such as number of followers and following. Users can edit their profile and view user details, create, edit, delete, and view posts. The app includes functionality for mutual users and a following list, as well as the ability to send follow requests by exploring users.
+          Just like a social media web app with features including user profile management
+           such as number of followers and following. Users can edit their profile and view user 
+           details, create, edit, delete, and view posts. The app includes functionality for 
+           mutual users and a following list, as well as the ability to send follow requests 
+           by exploring users. TalkPulse main theme is to chat endless, so chat feature is 
+           implemented using Socket.io
         </p>
       </div>
       
@@ -463,6 +469,7 @@ const App = () => {
           <li>CRUD for post management and ability to like and create comments.</li>
           <li>Follower list and following list of the current user.</li>
           <li>Follower request feature is achieved by exploring the user tab.</li>
+          <li>Current user can chat with follower and following list of users using Socket.io</li>
         </ul>
       </div>
       
