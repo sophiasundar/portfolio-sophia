@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react'; 
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload } from 'react-icons/fa';  // React Icons
-
-// import profile from ".";  // Replace with your image path
-// import about from "./path-to-about-image";  // Replace with your image path
-// import SkillsTools from "./SkillsTools";
-
 import profile from './Components/assets/profile/about.png';  // Profile image
 import about  from './Components/assets/about/girl coder.gif';
 import html5 from './Components/assets/TandS/html5.png';
@@ -199,7 +194,7 @@ const App = () => {
         </a>
 
         {/* Resume */}
-        <a href="https://drive.google.com/file/d/1eIPcq4DdGkTcX5vACuOdqUkTLUUZAU_y/view?usp=sharing" rel="noreferrer" target="_blank" className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-200 transition duration-300">
+        <a href="https://drive.google.com/file/d/1uZ3NGEvpAT3JfKi03028HV_5dDsBW3ud/view?usp=sharing" rel="noreferrer" target="_blank" className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-200 transition duration-300">
           <FaFileDownload size={30} />
         </a>
       </div>
