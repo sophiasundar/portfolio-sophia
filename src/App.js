@@ -321,7 +321,7 @@ const App = () => {
           rel="noreferrer"
           className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
         >
-          Site
+          Demo
         </a>
       </div>
     </div>
@@ -402,7 +402,7 @@ const App = () => {
           rel="noreferrer"
           className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
         >
-          Site
+          Demo
         </a>
       </div>
     </div>
@@ -492,7 +492,7 @@ const App = () => {
           rel="noreferrer"
           className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
         >
-          Site
+          Demo
         </a>
       </div>
     </div>
@@ -574,7 +574,7 @@ const App = () => {
           className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
           
         >
-          Site
+          Demo
         </a>
       </div>
     </div>
