@@ -24,6 +24,7 @@ import BountiBowl from './Components/assets/projects/BountiBowl.png';
 import catalog from './Components/assets/projects/catalog.png';
 import talkpulse from './Components/assets/projects/talkpulse.png';
 import paydone from './Components/assets/projects/paydone.png';
+import EMS from './Components/assets/projects/EMS.png'
 import Cardss from './Components/cards';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -569,6 +570,93 @@ const App = () => {
         </a>
         <a
           href="https://fe-paydone.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
+          
+        >
+          Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 py-12 mb-0">
+  <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-10" data-aos="fade-up">
+  <h2 className="text-2xl font-extrabold text-white mb-6 text-center" data-aos="fade-up"><ul><li>Employee</li><li>Management</li><li>System</li></ul></h2>
+  {/* <h2 className="text-4xl font-extrabold text-white mb-6 text-center" data-aos="fade-up">Management-System</h2> */}
+    {/* Project Image Section */}
+    <div className="flex-1 lg:w-2/3 mb-6 lg:mb-0">
+      <img
+        src={ EMS }
+        alt="Employee Management System App"
+        className="w-full h-80 object-cover rounded-lg shadow-lg" data-aos="fade-up"
+      />
+
+      {/* Tools Used Section */}
+      <div className="flex flex-wrap gap-1 mt-6">
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">React</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Redux Toolkit</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Redux Thunk</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">React Router DOM</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Axios</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Tailwind CSS</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Node.js</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Express</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Mongoose</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Bcrypt</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">JSON Web Tokens</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">CORS</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">Dotenv</span>
+        <span className="bg-orange-400 text-white py-1 px-3 rounded-full text-xs font-semibold hover:bg-orange-500 transition duration-300">nodemailer</span>
+      </div>
+    </div>
+    
+    {/* Project Description & Features Section */}
+    <div className="flex-1 lg:w-1/3 space-y-8" data-aos="fade-up">
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h4 className="text-l font-semibold mb-4">Description:</h4>
+        <p className="text-gray-600 text-base leading-relaxed">
+          Employee management system web app, makes admin and employee to get track the tasks, hours that have been logged,
+          and total hours they have been worked. admin have full control over employees record and Tasks. 
+        </p>
+      </div>
+      
+      <div className="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
+        <h4 className="text-xl font-semibold mb-4">Features:</h4>
+        <ul className="list-disc pl-5 text-gray-600 text-base">
+          <li>Good authentication flow using Redux.</li>
+          <li>Developed an automated time-tracking feature that 
+          records employee start and end times based on local system time, enhancing accuracy and eliminating manual entry errors.</li>
+          <li>Admin can able to create new employee in the employee is intimated with password through email.</li>
+          <li>Admin, while assigning the task to the employee also inform through email of deadline and task assigned.</li>
+          <li>Admin can do CRUD on employee Record and also CRUD Employee tasks.</li>
+        </ul>
+      </div>
+      
+      {/* Project Links Buttons */}
+      <div className="flex gap-4 mt-6" data-aos="fade-up">
+        <a
+          href="https://github.com/sophiasundar/BE-Employee/tree/main/Server-employee"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
+          
+        >
+          Github BE
+        </a>
+        <a
+          href="https://github.com/sophiasundar/client-employee"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
+          
+        >
+          Github FE
+        </a>
+        <a
+          href="https://client-employee.vercel.app/"
           target="_blank"
           rel="noreferrer"
           className="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
