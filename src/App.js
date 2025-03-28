@@ -26,6 +26,7 @@ import talkpulse from './Components/assets/projects/talkpulse.png';
 import paydone from './Components/assets/projects/paydone.png';
 import EMS from './Components/assets/projects/EMS.png'
 import Cardss from './Components/cards';
+import { motion } from "framer-motion";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -101,6 +102,8 @@ const App = () => {
 
   const [activeSection, setActiveSection] = useState("home");
   
+  const roles = ["Frontend Developer", "Backend Developer", "MERN Stack Web Developer"];
+  const [roleIndex, setRoleIndex] = useState(0);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll("section");
@@ -112,6 +115,15 @@ const App = () => {
       }
     });
   };
+
+  
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 2000); // Switch every 2 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -175,7 +187,21 @@ const App = () => {
         Hi, I'm Sophia Christina Gifta
       </h1>
       <hr className="border-white w-20 mx-auto my-2" />
-      <h4 className="text-xl animate__animated animate__fadeIn animate__delay-2s">MERN Stack Web Developer</h4>
+      
+
+       {/* Role Switching Animation */}
+       <motion.h4
+          key={roleIndex}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+          className="text-xl"
+        >
+          {roles[roleIndex]}
+        </motion.h4>
+
+      {/* <h4 className="text-xl animate__animated animate__fadeIn animate__delay-2s">MERN Stack Web Developer</h4> */}
 
       {/* Social Icons */}
       <div className="flex justify-center space-x-6 mt-6 animate__animated animate__fadeIn animate__delay-3s">
