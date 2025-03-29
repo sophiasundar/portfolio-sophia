@@ -27,8 +27,11 @@ import paydone from './Components/assets/projects/paydone.png';
 import EMS from './Components/assets/projects/EMS.png'
 import Cardss from './Components/cards';
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+
 
 
 const skills = [
@@ -98,9 +101,19 @@ const SkillsTools = ({ skills, tools }) => (
 
 
 
+
 const App = () => {
 
   const [activeSection, setActiveSection] = useState("home");
+
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  
   
   const roles = ["Frontend Developer", "Backend Developer", "MERN Stack Web Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
@@ -116,7 +129,42 @@ const App = () => {
     });
   };
 
-  
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.init(process.env.REACT_APP_PUBLIC_KEY);
+
+    emailjs
+      .send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          alert('Message sent successfully!');
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          console.error('Failed to send message:', error);
+          alert('Failed to send message. Please try again.');
+        }
+      );
+    }
+
+    
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -703,25 +751,44 @@ const App = () => {
 
       {/* Contact Section */}
       <section id='contact' className="bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 py-12 mb-0">
-        <h2 className="text-3xl text-white font-semibold text-center" data-aos="fade-up">Contact Me</h2>
-        <form className="mt-8 max-w-xl mx-auto">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="p-3 w-full rounded-lg border border-gray-300 mb-4"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="p-3 w-full rounded-lg border border-gray-300 mb-4"
-          />
-          <textarea
-            placeholder="Your Message"
-            className="p-3 w-full rounded-lg border border-gray-300 mb-4"
-          ></textarea>
-          <button className="bg-gray-500 text-white py-3 px-6 rounded-lg">Send Message</button>
-        </form>
-      </section>
+      <h2 className="text-3xl text-white font-semibold text-center" data-aos="fade-up">
+        Contact Me
+      </h2>
+      <form onSubmit={handleSubmit} className="mt-8 max-w-xl mx-auto">
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Your Name"
+          className="p-3 w-full rounded-lg border border-gray-300 mb-4"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Your Email"
+          className="p-3 w-full rounded-lg border border-gray-300 mb-4"
+          required
+        />
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Your Message"
+          className="p-3 w-full rounded-lg border border-gray-300 mb-4"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          className="bg-gray-500 hover:bg-gray-700 text-white py-3 px-6 rounded-lg"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
 
       {/* Footer Section */}
 <footer className="bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 text-white py-6">
